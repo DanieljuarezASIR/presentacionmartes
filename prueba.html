@@ -1,0 +1,225 @@
+
+
+<!DOCTYPE html>
+<html lang="- lang not found -">
+<head>
+	<title>Monitorización con Grafana</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport"  content="width=device-width, initial-scale=1">
+  <meta name="generator"  content="Slide Show (S9) v4.1.0 on Ruby 2.5.1 (2018-03-29) [x86_64-linux-gnu]">
+	<meta name="author"     content="Daniel Juárez Martínez">
+	<link rel="stylesheet" href="shower/themes/material/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+	<header class="caption">
+		<h1>Monitorización con Grafana</h1>
+		<p>Daniel Juárez Martínez</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>Monitorización con Grafana</h2>
+		<p>by Daniel Juárez Martínez</p>
+		<img src="s3.jpg" alt="" class="cover">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+				}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#cover p a {
+					color:#FFF;
+					}
+		</style>
+	</section>
+
+
+
+<section class="slide " id="1"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  
+<!-- _S9SLIDE_ -->
+<h2 id="introducción">Introducción</h2>
+
+<ol>
+  <li>¿Cuál es el objetivo?</li>
+  <li>¿Qúe es Grafana?</li>
+  <li>¿Qué es Prometheus?
+    <ol>
+      <li>Node-exporter</li>
+      <li>Cadvisor</li>
+    </ol>
+  </li>
+  <li>Alertas</li>
+  <li>Plugins</li>
+  <li>Grafana + Panoply + Analytics + Blog</li>
+</ol>
+
+
+
+</section>
+
+<section class="slide " id="2"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="cuál-es-el-objetivo">¿Cuál es el objetivo?</h2>
+<p>Hacer funcionar todos los servicios de los que se dispone.
+ El objetivo es implantarlo en una empresa para mejorar la calidad de trabajo productivo.</p>
+<ul>
+  <li>Aprovechar al máximo los recursos</li>
+  <li>Prevenir incidencias</li>
+  <li>Ahorro de tiempo
+    
+
+</section>
+
+<section class="slide " id="3"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="grafana-qué-es">Grafana ¿Qué es?</h2>
+  </li>
+</ul>
+
+<p>Es un conjunto de herramientas de código abierto para el análisis y visualización de métricas.
+imagen de grafana con las plataformas.
+<img src="monitoring.png" alt="plataformas" /></p>
+
+
+
+</section>
+
+<section class="slide " id="4"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="prometheus">Prometheus</h2>
+<p>Es un sistema de monitoreo de sistemas y servicios. Recopilando métricas en tiempo real.</p>
+<ul>
+  <li>Node-exporter</li>
+  <li>Cadvisor</li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="5"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="node-exporter">Node-Exporter</h2>
+<p>Exportador que analiza el hardware y del Sistema del equipo.</p>
+<ul>
+  <li>CPU</li>
+  <li>Memoria Usada
+<img src="node-exporter5.png" alt="node-exporter" /></li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="6"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="cadvisor">Cadvisor</h2>
+<p>Es un agente que monitorea,recogiendo métricas de uso de recursos de los contenedores.</p>
+<ul>
+  <li>uso de CPU por núcleo</li>
+  <li>Procesos en uso</li>
+</ul>
+
+<p><img src="cadvisor2.png" alt="cadvisor" /></p>
+
+
+</section>
+
+<section class="slide " id="7"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="alertas">Alertas</h2>
+<p>Grafana contiene un sistema de alertas que permite avisarnos  en caso de incidencia.</p>
+<ul>
+  <li>Telegram</li>
+  <li>Slack</li>
+  <li>Email
+    
+
+</section>
+
+<section class="slide " id="8"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="plugins">Plugins</h2>
+    <p>Es un componente que tiene la capacidad de ampliar las funciones de nuestra estructura.</p>
+  </li>
+  <li>Darksky</li>
+  <li>WorldPing
+    
+
+</section>
+
+<section class="slide " id="9"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="darksky">Darksky</h2>
+    <p>Es un plugin de metereología, recolecta información en tiempo real.</p>
+  </li>
+  <li>Tiempo Actual</li>
+  <li>Temperatura</li>
+</ul>
+
+<p><img src="darksky1.png" alt="Darksky" /></p>
+
+
+</section>
+
+<section class="slide " id="10"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="worldping">WorldPing</h2>
+<p>Es un complemento que nos sirve para monitorizar el estado de nuestra web.</p>
+<ul>
+  <li>Ping</li>
+  <li>DNS</li>
+</ul>
+
+<p><img src="worldping.png" alt="worldping" /></p>
+
+
+
+</section>
+
+<section class="slide " id="11"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="grafana--panoply--analytics--blog">Grafana + Panoply + Analytics + Blog</h2>
+<p>Estas son las plataformas con las que he realizado el monitoreo.
+Permitiendo obtener un análisis las 24 horas del día.</p>
+<ul>
+  <li>Tiempo de Visita</li>
+  <li>Navegador usado
+<img src="4pla1.png" alt="plataforma" />
+    
+
+</section>
+
+<section class="slide " id="12"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="agradecimientos">Agradecimientos</h2>
+    <p><img src="doa.jpg" alt="final" /></p>
+  </li>
+</ul>
+
+</section>
+
+
+
+<!--
+  To hide progress bar from entire presentation
+  just remove “progress” element.
+  -->
+<div class="progress"></div>
+<script src="shower/shower.min.js"></script>
+<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

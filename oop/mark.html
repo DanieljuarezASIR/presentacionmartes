@@ -1,0 +1,232 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>NODEJS, EXPRESS, MONGODB</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport"  content="width=device-width, initial-scale=1">
+  <meta name="generator"  content="Slide Show (S9) v4.0.1 on Ruby 2.6.1 (2019-01-30) [x86_64-linux-musl]">
+	<meta name="author"     content="ricochet">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+	<header class="caption">
+		<h1>NODEJS, EXPRESS, MONGODB</h1>
+		<p>ricochet</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>NODEJS, EXPRESS, MONGODB</h2>
+		<p>by ricochet</p>
+		<img src="images/imagen.png" alt="" class="cover">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+				}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#cover p a {
+					color:#FFF;
+					}
+		</style>
+	</section>
+
+
+
+<section class="slide " id="1"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  
+<!-- _S9SLIDE_ -->
+<h2 id="nodejs-express-mongodb">NODEJS, EXPRESS, MONGODB</h2>
+
+<p><img src="https://lh3.googleusercontent.com/Zc_zUlDxaRtgmiUUMcCdsqJI4ZKXfSzSnSJaaKMWy-sgjgp2sGgxXFyTIp1g2Yo2lGhK3asVu9Pe" alt="enter image description here" /></p>
+
+<ul>
+  <li><strong>NodeJS:</strong> Es una plataforma o entorno de ejecución para desarrollar con Javascript del lado del servidor. Está diseñado para generar aplicaciones web de forma altamente optimizada.</li>
+  <li><strong>ExpressJS:</strong>  Es un framework sobre NodeJS que nos permite trabajar con el protocolo HTTP y tener sistemas de rutas.</li>
+  <li><strong>MongoDB:</strong>  Es una base de datos NoSQL que nos permite trabajar con documentos json binarios (bson), en lugar de utilizar el sistema clásico de tablas y relaciones, lo que hace que se muy veloz. Tiene colecciones de documentos y estos documentos son objetos json (bson) y los datos se almacenan de manera binaria para aumentar le rendimiento.</li>
+</ul>
+
+
+
+</section>
+
+<section class="slide " id="2"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="creación-de-la-base-de-la-app">Creación de la base de la app</h2>
+
+<pre><code>mkdir ~/app
+sudo npm install express -g
+sudo npm i -g express-generator
+sudo express (Creará el esqueleto de la app)
+</code></pre>
+
+
+
+</section>
+
+<section class="slide " id="3"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="mongoose---biblioteca-de-javascript">Mongoose - Biblioteca de JavaScript</h2>
+<p>Usaremos Mongoose para:</p>
+
+<ul>
+  <li>Enlazar MongoDB y Nodejs</li>
+  <li>Definir modelos de datos</li>
+</ul>
+
+<p><img src="https://lh3.googleusercontent.com/SNqzWBz-IatMPQoWFXs9BtxLugOYWXDXpWEyRLAJh38lOexLSc0J1icCF2FZ0WKWwtaotM8af9mj" alt="configuración mongoose" title="Config" /></p>
+
+
+
+</section>
+
+<section class="slide " id="4"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="jade---motor-de-plantillas">Jade - Motor de plantillas</h2>
+<h3 id="layoutjade">layout.jade</h3>
+
+<p><img src="https://lh3.googleusercontent.com/idDFrSXZRiY2HZjMo-VAV9t5mObO7cuvAF42JmtdKW9YGbF6dVPzZL6ElcmeYsiXQD6fIFHluM5o" alt="enter image description here" title="Bootstrap" /></p>
+
+<h3 id="indexjade">index.jade</h3>
+<p><img src="https://lh3.googleusercontent.com/5tok6kDaZW4V6w3f203Kfox--4P7KY7skOt4bEF4903746v0eYnAzG1gnF0279FelHKdTs53Yu-O" alt="Creación de la pizzapp" /></p>
+
+<h3 id="menujade">menu.jade</h3>
+<p><img src="https://lh3.googleusercontent.com/04dEeGGVZlC4IYBSdM1WEHDsuI67_Owz7w5Pk2pxYsoeg2rPvwHBkW3Fp71z1P0hmHg2LhzOLjbW" alt="enter image description here" /></p>
+
+<p><img src="https://lh3.googleusercontent.com/Qs24Zb9elh5Pcic7YFTGzGDk6ykyGHuwjxhVdRgOfroVYsWOmd7czbmkW7-0mrYR5zUsiZzMD-1l" alt="enter image description here" /></p>
+
+<h3 id="loginjade">login.jade</h3>
+<p><img src="https://lh3.googleusercontent.com/1N9vMtFtdkdr5BIhGA-scR7rbk_snKKtklgeMKj6oCFiUz0OM_TRUwoqQydkguAQZnd7Z0GwSnLb" alt="enter image description here" /></p>
+
+
+
+</section>
+
+<section class="slide " id="5"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="autenticación---passport">Autenticación - Passport</h2>
+<p>Para la autenticación usaremos Passport, un middleware de Node que gestiona la autenticación de usuarios.</p>
+
+<p><img src="https://lh3.googleusercontent.com/fT4IQB-eJ3Scleuekg0Hv0_urStmXB1c_rLi8gEg9Rmy0J2Sa6HHhqc1x2b3fsXgWMLIwkJ-lwP4" alt="enter image description here" /></p>
+
+<h3 id="en-appjs">En app.js</h3>
+
+<ol>
+  <li>Creamos la sesión (express-session)</li>
+  <li>Iniciamos passport</li>
+  <li>Enlazamos la sesión al usuario  concreto</li>
+</ol>
+
+<p><img src="https://lh3.googleusercontent.com/tPuyMlWbqiV0g6V2jdFeByIoNoSygKupR_i4QL32_LSYxU1RBFhjjZ3_2zzqPBXY-RaE5ztui6_N" alt="enter image description here" /></p>
+
+<h3 id="usermodeljs">user.model.js</h3>
+<p>Creamos el modelo del usuario (mongoose)</p>
+
+<p><img src="https://lh3.googleusercontent.com/iG1DdvYPSaBlgUFI8Gj1u336r1ujzWT7AdP-aeecpQQtB5ywk_OLC4oTKWZGIV83i8YukM7SRgbw" alt="enter image description here" /></p>
+
+<p><img src="https://lh3.googleusercontent.com/rWWZ3bwlD6hfEVFP_Nlmk_G3_W2M9_sUhbGkJ7A6Z2obgvqBJmUZ4K3qLhixBWhBpQisJfPbZ38n" alt="enter image description here" /></p>
+
+<p>Una vez se envíe el formulario de inicio de sesión se</p>
+
+<p><img src="https://lh3.googleusercontent.com/q8WlZFVJgcC5vXJMs60sUHmopA-J6vAinh1CgH5wtFXchlnaXdqGVjzRDFosYDq-rh8C1fcKZG0p" alt="enter image description here" /></p>
+
+<p>En caso de que las credenciales sean correctas el usuario iniciará sesión</p>
+
+<p><img src="https://lh3.googleusercontent.com/1WFWXmr7vz-MHvgIPzaI8r2T1oDo_M_R70qy6oWBov9WObY7KP5b_L568Y8VfQgxafo3g2G_m82D" alt="enter image description here" /></p>
+
+<p>Si por el contrario falla la autenticación se producirá una redirección a la la ruta <strong>/user/login</strong></p>
+
+<p><img src="https://lh3.googleusercontent.com/ryrnmfO36m0dGzIqfiEnB6TMtiyepjahUzh9xeEoaC-tqwd6bJNs8xQzw2ow3SSMZe--b1uNUXGg" alt="enter image description here" /></p>
+
+<p><img src="https://lh3.googleusercontent.com/JseEZQBkXwv3nVh8aOQQo8mDai7pwG69iy_tzadpQFzvLpEh3Z6Xjfk28LEX1fua_U1Hw4hix-RM" alt="enter image description here" /></p>
+
+<h3 id="registerjade">register.jade</h3>
+
+<p><img src="https://lh3.googleusercontent.com/8vHKF_uomoWUfjPlOHsfnDMQ1Rd9Ws2_sYtr0fF1I5FkFsLcCAWFTl6TLxfUKiWcEygEmp-c9mYY" alt="enter image description here" /></p>
+
+<p><img src="https://lh3.googleusercontent.com/NeMbvODpTc0a98REbLPKMKKH9aT4q7dnyMlzgIRFYx1ub-mYoHSSiyodMnomimH0mKgw1haUm3b2" alt="enter image description here" /></p>
+
+<p><img src="https://lh3.googleusercontent.com/IYwHVAt7s711cTSJFPx1i9TKtPirkml4URxeuLszvoETyZChzMILYtDgmcEbIeT8atW4KHO4vdXo" alt="enter image description here" /></p>
+
+<p>Ahora en nuestra base de  datos <strong>pizzapp</strong> se habrá creado el usuario recién creado.</p>
+
+<h3 id="ordermodeljs">order.model.js</h3>
+
+<p>Definimos el modelo de los pedidos</p>
+
+<p><img src="https://lh3.googleusercontent.com/CChxv-waYNBvXp2kQtL75-8tyukoYaE4urPIE9RMHoykz3C6X5Fy2sOihbFSBj_UfIe1A5_2bMIN" alt="enter image description here" /></p>
+
+<h3 id="orderjade">order.jade</h3>
+
+<p><img src="https://lh3.googleusercontent.com/g6rbD0TYh7FsmesTiEItV5E8WPodQHMitFk6z6vNaPHwfIewUtWa1-TaWm2yE5x_HoBoymbHwdgX" alt="enter image description here" /></p>
+
+<p><img src="https://lh3.googleusercontent.com/8RlipmSMnox7mHWzyWQlEmSp_6crx-9tjLe6v7q8fFLwL-f7560QyjWR2tRlmVsH3IqjpJ2hRS29" alt="enter image description here" /></p>
+
+<p>Cuando se realice el pedido será impreso:</p>
+
+<p><img src="https://lh3.googleusercontent.com/_KBKRw_xd5pofTcR9XYfgH_8dt3vTtkkLTZooonT3pmFoFsvVoJHNUUxQU2HP6Fp7jXQE8FIIYZe" alt="enter image description here" /></p>
+
+
+
+</section>
+
+<section class="slide " id="6"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="nodemailer---envío-de-correo">Nodemailer - Envío de correo</h2>
+<p>Nodemailer nos ofrecerá los métodos necesarios para poder habilitar el envío de correo automático, en este caso elegimos <strong>Gmail</strong> que viene implementada por defecto.</p>
+
+<p><img src="https://lh3.googleusercontent.com/ejC9-L0iry4Z_V_4xVTa0SjJ4B1-tv5YhiBPSFi3nDunJzGVpmLJuW7n5eHvLFaWtOtMt0rcs7kw" alt="enter image description here" /></p>
+
+<p>Configuramos el correo automático</p>
+
+<p><img src="https://lh3.googleusercontent.com/-Nn3h9IA3PaMk87e1pw_vutH8GiVmiDG4qitXrO4G8nVNv_1p4J_QxBVCgN255en-LbnUOdz-dm2" alt="enter image description here" /></p>
+
+<p>Con el siguiente código se enviará un correo automáticamente al correo de aquellos clientes que hayan realizado un pedido y dicho pedido esté listo <strong>(ready)</strong></p>
+
+<p><img src="https://lh3.googleusercontent.com/GxIVdta7TG9UM5AJ6c9LVrYhJGvUkyDUrur57POetP7xkgRd-PnvyMXKkj0xPkQRK2laGXkQ32uj" alt="enter image description here" /></p>
+
+<p>Una vez el administrador modifica el estado del pedido a <strong>ready</strong> nodemailer enviará automáticamente el correo al cliente.</p>
+
+<p><img src="https://lh3.googleusercontent.com/VPmNt3vWf6bRz_m_kCSkzlgzDjvQgSrcaVmvAhqZhox7_60vNe8wKiQuC6E6lDtMMPTn9JkjUic1" alt="enter image description here" /></p>
+
+
+
+</section>
+
+<section class="slide " id="7"> <!-- fix: add +2 or +1 was: (i+2).to_s -->
+  <!-- _S9SLIDE_ -->
+<h2 id="problemas-durante-el-curso">Problemas durante el curso</h2>
+
+<ul>
+  <li>Problema de la autenticación mongodb - /auth al meter el middleware</li>
+  <li>Checklist en register.jade - cambiar el order.model.js (email_on_ready), problema derivado de la actualización (stack overflow)</li>
+</ul>
+
+
+</section>
+
+
+
+<!--
+  To hide progress bar from entire presentation
+  just remove “progress” element.
+  -->
+<div class="progress"></div>
+<script src="shower/shower.min.js"></script>
+<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
